@@ -8,5 +8,8 @@
 - [git commit 메시지 사전 ⓐ](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html)
 - [git commit 메시지 사전 ⓑ](https://meetup.toast.com/posts/106)
 - [모범예시 GitHub ](https://github.com/namjunemy/TIL)
-- 
-
+- [Git 가이드 (2)](https://codechacha.com/ko/git-delete-add-remote/)
+- [연습](https://www.speedcoder.net/lessons/custom/1/python/%ED%8C%8C%EC%9D%B4%EC%8D%AC/1/)
+-  [파이썬 참고](https://docs.python.org/ko/3/library/random.html?highlight=random#random.sample)
+-  
+-  
