@@ -194,16 +194,11 @@ for i in range(len(lunch_box))
 
 > 특정한 용도 어떤 작업을 반복하기 위해서 사용
 
-- 파이썬 함수: Built-in (내장함수) / 비내장함수(?)
-    - print('hi')	abs(-3) = 3 절댓값	len('hi') = 2 길이
+- EX. print('hi')	abs(-3) = 3 절댓값	len('hi') = 2 길이
 
 - 모듈 : 많이 쓰는 함수를 묶어놓은 것
 
 ---
-
-
-
-*import random* 제일 먼저 써주기
 
 
 
@@ -223,7 +218,7 @@ today_menu = random.choice(lunch_box)
 print(today_menu)
 ```
 
-- import random 안 치면, NameError가 뜬다
+- **import random** 안 치면, NameError가 뜬다 
 
 
 
@@ -260,15 +255,13 @@ for i in range(5):
 
 - `sorted` : 정렬
 
-- `list`  :  요소들을 담고 있음. 반복 가능한 가변 시퀀스
+- `list`  :  요소들을 담고 있음. 반복 가능한 가변 시퀀스 
 
   a = [1, 2, 3]  /// a = ['1', '3']
 
 - `range`  : 숫자들의 불변 시퀀스
 
 ​		b = range(1,6)
-
-
 
 ```pyth
 import random
