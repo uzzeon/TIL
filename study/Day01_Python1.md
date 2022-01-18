@@ -8,7 +8,7 @@
 
   - 할당 연산자(=)를 통해 값을 할당함
 
-  - type() : 변수에 할당된 값의 타입
+  - type() : 변수에 할당된 값의 타입_ str 등
 
   - id() : 변수에 할당된 값의 고유한 아이덴티티 값이며 메모리주소
 
@@ -94,9 +94,13 @@
 - String Type : 문자형
 
   - 작은 따옴표나 큰 따옴표를 활용하여 표기
-  - immutable 특정 값 하나만 바꿀 수 없다. my string! 을 my string?으로 바꿀 수 없음
-  - lterable
-  - string interpolation : 문자열을 변수를 활용하여 만드는 법 (59페이지)
+  - immutable 문자열을 변경할 수 없음_ 특정 값 하나만 바꿀 수 없다. my string! 을 my string?으로 바꿀 수 없음
+  - lterable 문자열을 순회 가능함
+  - escape sequence : `\` 활용
+    - \n 줄 바꿈, \t 탭, \0 널(null)  
+  - string interpolation : 문자열을 변수를 활용하여 만드는 법
+    - %d 정수, %f 실수, $s 문자열
+    - str.format()
 
 - None Type : 값이 없음을 표현하기 위한 타입
 
@@ -120,7 +124,7 @@
 
 - 가변자료형
 
-- 대괄호 형태 혹은 list를 통해 생성
+- 대괄호 형태 [] 혹은 list()를 통해 생성
 
 ```python
 boxes = ['A', 'B', ['apple', 'banana', 'cherry']]
