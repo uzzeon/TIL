@@ -11,5 +11,9 @@
 - [Git 가이드 (2)](https://codechacha.com/ko/git-delete-add-remote/)
 - [연습](https://www.speedcoder.net/lessons/custom/1/python/%ED%8C%8C%EC%9D%B4%EC%8D%AC/1/)
 -  [파이썬 참고](https://docs.python.org/ko/3/library/random.html?highlight=random#random.sample)
--  
--  
+
+
+
+- [복습할 때 참고할 자습서](https://docs.python.org/ko/3.10/index.html)
+- [복습할 때 참고할 사전](https://docs.python.org/ko/3.10/library/index.html)
+- 
