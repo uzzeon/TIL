@@ -78,18 +78,32 @@
     - 부동소수점
 
     - e = 10*17
-    
+
       ```python
       10**100/3
       3.33333333333e+99
       ```
-    
+
       ````py
       1e-1
       0.1
       ````
-    
-      
+
+  - Complex : 복소수
+
+    - complex(1, 2) = 1 + 2j
+
+    - 실수 부분: real / 허수 부분: imag
+
+      ```python
+      a = ComplexNumber(1, 2) * self
+      a.real = 1
+      a.imag = 2
+      ```
+
+
+
+
 
 - String Type : 문자형
 
@@ -101,9 +115,7 @@
   - string interpolation : 문자열을 변수를 활용하여 만드는 법
     - %d 정수, %f 실수, $s 문자열
     - str.format()
-
 - None Type : 값이 없음을 표현하기 위한 타입
-
 - 역슬래시 
 
 
