@@ -197,3 +197,126 @@ def my_any(elements):
     return False
 ```
 
+
+
+
+
+## 3. 실습문제02_ Practice 2
+
+### 1번 문제. 달팽이 문제
+
+```python
+# 내 첫번째 답안
+
+def snail(height, day, night):
+    
+    for i in range(1, 9999999999999999999):
+        if ((day - night) * (i - 1) + day) >= height:
+            break
+    return i
+    
+print(snail(103, 5, 2)) 
+```
+
+```python
+# 내 두번째 답안
+
+def snail(height, day, night):
+    answer = 1
+
+    while True:
+        height = height - day
+        if height > 0:
+            height = height + night
+            answer += 1
+        else: 
+            break
+    return answer
+
+print(snail(100, 5, 2))
+```
+
+참고 답안Ⅰ
+
+```python
+def snail(height, day, night):
+    # 통이 없다. => while
+    # 올라간 높이 > 기둥 높이
+	result = 0
+    while True:
+        result += 1
+        height -= day
+        if height <= 0:
+            return result
+        height += night
+```
+
+- 쓸 수 있는 통이 없다 => `while` 
+
+
+
+### 2번 문제: 자릿수 더하기
+
+내 답안
+
+```python
+def sum_of_digit(number):
+    
+    result = 0
+    for i in range(0, len(str(number))):
+        result = result + int(str(number)[i])
+    return result
+```
+
+
+
+교수님 답안
+
+```python
+# 몫은 계속 더해가고, 나머지는 다음 반복의 재료로 사용
+
+def sum_of_digit(number):
+    # 10씩 number를 나눔
+    result = 0
+	while True:   
+        result += number % 10
+        number = number // 10
+        if number == 0:
+            return result
+
+```
+
+- **숫자를 하나한 나눈다면, `몫과 나머지` 로 접근하는 것이 일반적**
+
+- `divmod(number, 10)` 사용도 가능
+
+  - divmod(n1, n2): n1을 n2로 나누고 몫과 나머지를 튜플형태로 제공함
+
+  
+
+- 질문하기
+
+```python
+def sum_of_digit(number):
+    result = 0
+    while True:   
+        number = divmod(number, 10)[0]
+        result += divmod(number, 10)[1]
+        if number == 0:
+            return result
+```
+
+ - 실수) 첫 시행 때의 나머지는 포함이 안된다. >> 아래와 같이 수정
+
+```python
+def sum_of_digit(number):
+    result = 0
+    while True:
+        result += divmod(number, 10)[1]
+        number = divmod(number, 10)[0]
+        if number == 0:
+            return result
+```
+
+
+

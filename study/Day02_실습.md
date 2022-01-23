@@ -7,15 +7,13 @@
 ```python
 fruit = ['딸기', '바나나', '수박']
 
-count = 0
+count = 0 # 변수를 초기화해야 한다. 
 for i in fruit:
     count += 1
 print(count)
 
 # print(len(fruit))
 ```
-
-- **count = 0** 변수를 초기화해야 한다. 
 
 
 
@@ -93,7 +91,7 @@ print(min_num)
 
 
 
-## 5. 최댓값 구하고, 몇 번인지 구하기
+## 5. 최댓값 구하고, 몇 번인지 구하기 ※
 
 ```python
 numbers = [7, 10, 22, 7, 22, 22]
@@ -169,7 +167,6 @@ print(count)
 ```python
 # 1번. 출력버전
 # a를 만나면 continue하게 하고, end 넣어서 붙어서 출력되도록 함
-# print(char, end ='\n')
 
 word = input()
 
