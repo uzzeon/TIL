@@ -111,7 +111,6 @@
       print('')
   ```
   
-
 - **계단 만들기 ★ (ws #3)**
 
   ```python
@@ -211,3 +210,68 @@ all_list_sum([[1],1,[1,1,1],[1,1]])
   ```
 
   
+
+## 5일차 
+
+- HW 3번 <신기한 답안. 참고>
+
+```python
+def only_square_are(L1, L2):
+    value = set(L1) & set(L2)
+    return [i**2 for i in value]
+```
+
+- set은 수학의 집합 개념이라는 점!
+  - `ㅣ` 합집합, `&` 교집합, `-` 차집합, `^` 대칭 차집합
+
+
+
+- WS 2번 ★★ 대표적인 word counting 문제
+
+  ```python
+  # 딕셔너리 만들어서 현출하기...
+  
+  def count_blood(bloods):
+      blood_dict = {} #답 담을 통을 만들고
+      for blood in bloods: #리스트의 값을 하나씩 돌면서,,,
+          if blood_dict.get(blood): #값이 나왔다는 건 blood_dict에 이미 값이 있다는 말
+              blood_dict[blood] += 1
+          else:
+              blood_dict[blood] = 1 #해당 blood로 키를 만들고 1로 value 값
+              
+      return blood_dict   
+  ```
+
+  <교수님 답안>
+
+  ```python
+  result = {}
+  for blood_type in blood_types:
+      if blood_type in result:
+          result[blood_type] += 1
+      else:
+          result[blood_type] = 1
+  ```
+
+  ```python
+  result = {}
+  for blood_type in blood_types:
+      result[blood_type] = result.get(blood_type, 0) + 1
+      # 에러가 뜨지 않게 초기 값을 0으로 두는 것
+  ```
+
+  
+
+- 딕셔너리의 `.get()` 
+
+  ```python
+  dic = {'a': 10, 'b': 20}
+  
+  print(dic.get('a')) #>> 10
+  print(dic.get('b', 0)) #>> 20
+  #>> 키가 존재하면 해당 키 값을 호출하고, 존재하지 않는 키를 입력하면 괄호 안에 입력한 값인 '0'이 호출된다.
+  print(dic.get('c', 0)) #>> 0
+  ```
+
+  
+
