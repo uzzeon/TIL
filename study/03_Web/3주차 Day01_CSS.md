@@ -175,40 +175,50 @@ h1 : 선택자 / 2번째 줄: 선언 / font-size : 속성 / 100px : 값
 
 
 
-#### block 과 display 꼭 알기
+#### block 과 inline 꼭 알기
 
-- display: block 
-  - 줄 바꿈이 일어나는 요소
-  - 화면 크기 전체의 가로 폭을 차지한다 (한 줄을 다 먹음)
-- display: inline
-  - 기본 영역은 content
-  - 줄 바꿈x
-  - content 너비만큼 가로 폭을 차지한다
-  - width, height, margin-top, margin-bottom 등을 지정할 수 없다. _ margin-left, margin-right는 줄 수 있다.
+##### `block` 
 
-
-
-- 블록 레벨 요소와 인라인 레벨 요소
-
-  - 블록레벨요소: div, ul, ol, li, p, hr, form 등
-  - 인라인 요소: span, a, img, input, label, b, em, i, strong 등
-
-  
-
-- block: 너비를 가질 수 없다면 자동으로 부여된 margin
-
+- 줄 바꿈O
+- **화면 크기 전체의 가로 폭**을 차지한다 (한 줄을 다 먹음. 가질 수 있는 너비 100%)
+- 블록 레벨 요소 안에 인라인 레벨 요소가 들어갈 수 있다.
+- 블록레벨요소: `div / ul, ol li / p / hr / form` 등
+- 너비를 가질 수 없다면 자동으로 margin이 부여됨
   - 중간정렬하는 법: `margin-right: auto; margin-left: auto;` (남은 영역을 배치함으로써)
 
+
+
+##### `inline`
+
+- 줄 바꿈X
+- **content 너비만큼 가로 폭**을 차지한다.
+- width, height, margin-top, margin-bottom 등 지정 불가 / margin-left, margin-right는 지정 가능
+- 상하 여백은 line-height로 지정한다.
+- 인라인 요소: `span / a / img / input / label / b, em, i, strong` 등
+
+
+
+- 속성에 따른 수평 정렬
+
+  ```html
+  글씨 좌측 정렬 margin-right:auto; text-align:left;
+  글씨 우측 정렬 margin-left:auto; text-align:right;
+  글씨 중간 정렬 margin-left:auto; margin-right:auto; text-align:center;
+  ```
+
   
 
-- display: inline-block 
-  - blcok과 inline 레벨 요소의 특징을 모두 가짐
-  - inline 처럼 한 줄에 표시 가능하고, block 처럼 width, height, margin 속성을 모두 지정할 수 있음
-  - 으로 바꿔서 1000픽셀 가지게끔... 
+##### `inline-block` 
 
-- display: none (영역을 차지하지도 않음. 숨겨짐)
+- block과 inline 레벨 요소의 특징을 모두 가짐
+- inline 처럼 한 줄에 표시 가능하고, block 처럼 width, height, margin 속성을 모두 지정할 수 있음
+- 으로 바꿔서 1000픽셀 가지게끔... 
 
-- display: hidden (공간은 차지하지만 화면에서만 보이지 않음)
+
+
+##### `display: none` **(영역을 차지하지도 않음. 숨겨짐)**
+
+##### `visibility: hidden` (공간은 차지하지만 화면에서만 보이지 않음)
 
 
 
@@ -228,13 +238,14 @@ h1 : 선택자 / 2번째 줄: 선언 / font-size : 속성 / 100px : 값
 }
 ```
 
-- relative: 상대 위치	
+- `relative`: 상대 위치	
   - 자기 자신의 static 위치를 기준으로 이동 (normal flow 유지)
-  - normal position 대비 offset (내 원래 위치 기준)
-- absolute: 절대 위치
-  - 요소를 일반적인 문서 흐름에서 제거 후 레이아웃에 공간을 차지하지 않음 (normal flow에서 벗어남)
+  - 레이아웃에서 요소가 차지하는 공간은 static일 때와 같음 (기존위치 대비 offset)
+- `absolute`: 절대 위치
+  - 요소를 일반적인 문서 흐름에서 제거 후 레이아웃에 공간 차지X (normal flow에서 벗어남)
   - static이 아닌 가장 가까이 있는 부모/조상 요소를 기준으로 이동
-- fixed: 고정 위치
+  - 부모 요소에 `position: relative`를 주고 자식 요소에 `position: absolute`를 줘야함
+- `fixed`: 고정 위치
   - normal flow에서 벗어남
   - viewport를 기준으로 이동 (내가보고 있는 브라우저 화면 기준)
 
@@ -242,7 +253,7 @@ h1 : 선택자 / 2번째 줄: 선언 / font-size : 속성 / 100px : 값
 
 ### CSS 원칙
 
-- CSS 원칙 Ⅰ, Ⅱ : Normal flow
+- CSS 원칙 Ⅰ, Ⅱ : Normal flow (block은 위에서 아래 / inline은 좌우로)
   - 모든 요소는 네모, 좌측 상단에 배치
   - display에 따라 크기와 배치가 달라짐
 - CSS 원칙 Ⅲ
