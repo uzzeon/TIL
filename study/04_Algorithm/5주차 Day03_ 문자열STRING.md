@@ -114,28 +114,29 @@ print(s)
 #### 회문 판별하기 - 인덱스 연산을 활용해서 반만 비교하기
 
 ```python
-s = input()
-N = len(s)
+s = input() 단어
+N = len(s) 단어길이
 
 ## 방법 1 ##
 i = 0
-while i<N//2:
-    if s[i] != s[N-1-i]:
+while i<N//2:  # i = 0, 1, 2, 3, 4,
+    if s[i] != s[N-1-i]:   글자의 제일 처음 =/= 제일 마지막 철자 : s[0] = s[9]_ // s[4] = s[5]
         break
-    i += 1
-if i == N//2:
+    i += 1 #i=5 
+    
+if i == N//2:   (while문을 다 반복하고 나왔을 때): i=5 = 10//2 = 5
     print('회문')
 else:
     print('회문아님')
     
 ## 방법 2 ##
 ans = '회문아님'
-for i in range(N//2):
-    if s[i] != s[N-1-i]:
+for i in range(5): # i = 0,1,2,3,4
+    if s[i] != s[N-1-i]: 
         break
 else:
     ans = '회문'
-print(ans)    
+print(ans)
 ```
 
 
@@ -332,8 +333,6 @@ for i in arr:
 
 
  
-
-
 
 ## 4. 문자열 압축
 
